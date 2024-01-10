@@ -1,5 +1,5 @@
-$bgColor: #24292e;
-$text: #fff;
+$bgColor: pink;
+$text: pink;
 
 @font-face {
   font-family: 'Comic';
@@ -14,4 +14,7 @@ body {
   font-family: Comic, sans-serif;
   background-color: $bgColor;
   color: $text;
+}
+h3 {
+  color: pink;
 }
