@@ -1,0 +1,265 @@
+
+
+.left-sidebar::after {
+  content: "";
+  position: absolute;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0.9;
+  z-index: 49;
+  
+}
+
+.aside {
+    z-index: 50;
+    position: absolute;
+    left: -360px;
+    top: 0;
+    min-width: 320px;
+    max-width: 360px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-bg-swiper;
+    transition: transform 0.5s linear;
+    box-shadow:
+      16px 0px 52px 0px rgba(14, 24, 80, 0.2),
+      -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+      overflow-y:auto;
+      
+      
+        
+        
+      
+      .section-aside {
+        position: relative;
+      }
+  }
+  
+  .header-menu {
+    display: flex;
+    align-items: center;
+    padding-top: 19px;
+    margin-bottom: 47px;
+  }
+  
+  .header-menu > button {
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+    padding: 0;
+  }
+  
+  .button-asideImg:hover,
+  .icon-logo:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  
+  .footer-menuButton {
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+    padding: 0;
+    &:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    }
+  }
+  
+  
+  
+  .footer-menu__email:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 0.5;
+    color: blue;
+  }
+  
+  .footer-menu__number:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    color: blue;
+  }
+  
+  .button-asideImg {
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+    padding: 0;
+  }
+  
+  .button-asideImg:focus {
+    outline: none;
+  }
+  
+  .icon-quit {
+    margin-left: 24px;
+  }
+  .icon-logo {
+    margin-left: 17px;
+  }
+  .icon-search {
+    margin-left: 78px;
+  }
+  
+  .menu-aside {
+    display: flex;
+    width: 222px;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'TT regular';
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 16px;
+    
+  }
+  
+  .menu-aside > li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    white-space: nowrap;
+    padding-left: 24px;
+    position: relative;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 1);
+  }
+  
+  .menu-aside__item:hover:before {
+    display: block;
+    content: '';
+    background: rgba(65, 246, 215, 1);
+    width: 4px;
+    height: 32px;
+    position: absolute;
+    left: 0;
+    top:-7px;
+    opacity: 100%;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .menu-aside__item:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .footer-menu {
+    position: relative;
+    z-index: 50;
+    display: flex;
+    margin-left: 24px;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-menu > li > button {
+    margin-right: 16px;
+  }
+  
+  .footer-menu__email {
+    display: block;
+    cursor: pointer;
+    margin-bottom: 12px;
+    margin-left: 24px;
+    font-family: 'TT regular';
+    text-decoration: none;
+    font-style: normal;
+    color: black;
+    
+  }
+  
+  .footer-menu__number {
+    display: block;
+    margin-left: 24px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    text-decoration: none;
+    font-style: normal;
+    color: black;
+  }
+  
+  .footer-menuLang {
+    display: flex;
+    list-style: none;
+    margin-left: 24px;
+    padding: 0;
+  }
+  
+  .footer-menuLang > li > button {
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-family: 'TT medium';
+    font-size: 16px;
+  }
+  
+  .footer-menuLang__item {
+    margin-right: 7px;
+  }
+  
+  .footer-menuLang__item:hover {
+    font-weight: bold;
+  }
+
+
+
+  @media (min-width: 769px) and (max-width: 1120px) {
+    
+    .footer-menu {
+        margin-top: 270px;
+    }
+  }
+  @media (min-width: 1121px) {
+    
+    body {
+      display: grid;
+      grid-template-areas:
+          "aside main"
+          "aside foot";
+      grid-template-rows: 1fr  120px; 
+      grid-template-columns: 320px 1fr;
+    }
+
+  .main {
+    grid-area: main;
+  }
+  .footer {
+    grid-area: foot;
+    border-top: 3px solid rgb(217, 255, 245);
+    
+  }
+    
+    .footer-menu {
+        margin-top: 270px;
+    }
+
+    // .sidebar-blur {
+    //   display: none;
+    // }
+
+    .aside {
+    position: static;
+    grid-area: aside;
+    display: block;
+    width: 320px;
+    min-height: 100%;
+    box-shadow: none;
+    left: 0;
+    z-index: 48;
+    
+    .icon-quit {
+      display: none;
+    }
+    .header-menu {
+      justify-content: space-around;
+      .icon-logo {
+        position: relative;
+        left: -20px;
+      }
+    }
+    }
+  }

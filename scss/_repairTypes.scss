@@ -1,0 +1,153 @@
+@media (max-width: 768px) {
+.repair-swiper {
+    min-height: 200px;
+    margin-left: 16px;
+.repair-type {
+    min-width: 240px;
+    max-width: 240px;
+    height: 160px;
+    background-color: $color-bg-swiper;
+    display: grid;
+    border-radius: 5px;
+    border: 1px solid rgba(234, 234, 234, 1);
+    grid-template-rows: 60px 100px;
+    align-items: center;
+    
+    // position: relative;
+&__text {
+    margin: 16px;
+    
+}
+&__pic {
+    margin: 16px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+    
+}
+}
+}
+.repair-list {display: none;} // убираем грид который начинается с 769 width
+}
+
+@media (min-width: 769px) and (max-width: 1120px) {
+    .repair-list {
+        min-width: 820px;
+        padding: 0;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(3, 3fr); 
+        grid-template-rows: auto auto; 
+        gap: 24px 16px;
+        margin: 24px;
+        margin-bottom: 32px;
+    
+        &__button {
+            margin-left: 5px;
+            
+            &:hover {
+                cursor: pointer;
+                opacity: 0.5;
+            }
+        }
+
+        &__item {
+        position: relative;
+        display: grid;
+        grid-template-rows: 60px 100px;
+        width: 224px;
+        height: 160px;
+        background-color: $color-bg-swiper;
+        border-radius: 5px;
+        border: 1px solid rgba(234, 234, 234, 1);
+        .repair-type__text {
+            margin: 16px;
+            
+        }
+        .repair-type__pic {
+            margin: 16px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            &:hover {
+                cursor: pointer;
+                opacity: 0.5;
+            }
+            
+        }
+        } 
+        a {
+            width: 40px;
+            height: 40px;  
+        }
+        &__button {
+            all: unset;
+        }  
+    }
+
+}
+
+@media (min-width: 1121px) {
+    .repair-list {
+        min-width: 820px;
+        padding: 0;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(4, 4fr); 
+        grid-template-rows: auto auto; 
+        gap: 16px 16px;
+        margin: 24px 24px 50px 24px;
+        
+    
+        &__button {
+            margin-left: 5px;
+            
+            &:hover {
+                cursor: pointer;
+                opacity: 0.5;
+            }
+        }
+
+        &__item {
+        position: relative;
+        display: grid;
+        grid-template-rows: 60px 100px;
+        width: 240px;
+        height: 160px;
+        background-color: $color-bg-swiper;
+        border-radius: 5px;
+        border: 1px solid rgba(234, 234, 234, 1);
+        .repair-type__text {
+            margin: 16px;
+            
+        }
+        .repair-type__pic {
+            margin: 16px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            &:hover {
+                cursor: pointer;
+                opacity: 0.5;
+            }
+            
+        }
+        } 
+        a {
+            width: 40px;
+            height: 40px;  
+        }
+        &__button {
+            all: unset;
+        }
+        div {
+            grid-row: 3; 
+            grid-column: 1;
+            
+        }  
+    }
+}
